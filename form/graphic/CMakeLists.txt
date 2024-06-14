@@ -1,0 +1,11 @@
+include_directories(../sudoku)
+include_directories(../network)
+add_library(graphic form.cpp form.ui)
+
+target_include_directories(graphic INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(graphic sudoku)
+target_link_libraries(graphic network)
+target_link_libraries(graphic Qt6::Widgets Qt6::Core Qt6::Gui)
+target_link_libraries(graphic wsock32 ws2_32)
+target_link_libraries(graphic C:/boost_1_84_0/bin.v2/libs/system/build/msvc-14.3/release/link-static/threading-multi/libboost_system-vc143-mt-x64-1_84.lib)
+target_link_libraries(graphic C:/boost_1_84_0/bin.v2/libs/thread/build/gcc-13/release/link-static/threadapi-win32/threading-multi/visibility-hidden/libboost_thread-mgw13-mt-x64-1_84.a)
