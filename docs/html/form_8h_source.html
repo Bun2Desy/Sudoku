@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sudoku Game: Исходный файл form/graphic/form.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sudoku Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_da42b1026d1807cb574b34ae429931aa.html">form</a></li><li class="navelem"><a class="el" href="dir_57cabb212fcc5557c9f0f7a100a3be94.html">graphic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">form.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="form_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef FORM_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define FORM_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;ui_form.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="sudoku_8h.html">sudoku.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="class_form.html">Form</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_form.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="class_form.html">Form</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Q_OBJECT</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">//QTableWidgetItem * lastSelectedCell;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_form.html#a1d44d573092ef7756d931fd91267abdb">   26</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_form.html#a1d44d573092ef7756d931fd91267abdb">lastSelectedCellRow</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_form.html#a09685f4aeafa180e190edabcd281951b">   27</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_form.html#a09685f4aeafa180e190edabcd281951b">lastSelectedCellColumn</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_form.html#a2cc05ee490f405b141657ad538b0a3a4">   28</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_form.html#a2cc05ee490f405b141657ad538b0a3a4">currentTimeSeconds</a>{0};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_form.html#a7d2729c79ee67a75e959620aa2c1e552">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_form.html#a7d2729c79ee67a75e959620aa2c1e552">errorsCount</a>{0};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_form.html#a7a2dc8f5edf71a36c0391efd87f272df">   30</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_form.html#a7a2dc8f5edf71a36c0391efd87f272df">secondClientIsConnect</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_form.html">Form</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="class_form.html">~Form</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_form.html#a3b4aeaae4b2c95d303112432d9c78cd0">ChangeButtonsVisible</a>(<span class="keywordtype">bool</span> flag);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_form.html#ab3b3c5722cc154b013437a281faaaf7f">SetNumberToCell</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column, QString cellValue);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_form.html#a2c3ceedef7fe03eb79ebbd5f0c6cad95">FillSudokuTable</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_form.html#a723c8f63c12659862c5df59b48a31488">GetSudokuTable</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_form.html#affe29cd38a39e8a78e312a5fb722801e">UpdateTimer</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="class_form.html#a2cc05ee490f405b141657ad538b0a3a4">currentTimeSeconds</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_form.html#a6db2873a1777593a0883e066c9976486">StartGame</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::string <a class="code hl_function" href="class_form.html#a231cb1aa274b9cf1b67ac49abca9dddb">TransformToTimeFormat</a>(<span class="keywordtype">int</span> time);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>signals:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> SendMessageSignal(std::string messageNum);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> SudokuIsReadyToFill();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> GameEndWin();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> GameEndLose();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> CloseServer();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_form.html#ad56f457f69cd72d60855730544bbf8bb">OpenGameMenu</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_form.html#a010bd13cb63f8fe5f7763ec3a1a787a8">PlayerStepInformationParser</a>(std::string compileMessage);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_form.html#a645a7d454a5da44c5fcf2de2b3b9c89a">CompileMessageToSudokuArray</a>(std::string compileMessage);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> CompileMessageToSolvedSudokuArray(std::string compileMessage);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_form.html#af000df575d22c703b11776bb635010c9">IncrementTime</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_form.html#aa6111816e5287125820da9429e26c0fd">WinnerGameWindow</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_form.html#adc0ae67114cb7b4071b9f4c5a954e120">ClientConnected</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_form.html#a3dbc0d3b5c9d6474d5fd078d42fa71fc">LoserGameWindow</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> on_createGameButton_clicked();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> on_button1_clicked();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> on_sudokuTable_cellPressed(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> on_button2_clicked();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> on_button3_clicked();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> on_button4_clicked();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> on_button5_clicked();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> on_button6_clicked();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> on_button7_clicked();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> on_button8_clicked();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> on_button9_clicked();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> on_joinGameButton_clicked();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> on_backButton_clicked();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> on_playGame_clicked();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    Ui::Form *ui;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_class" href="class_sudoku.html">Sudoku</a> sudokuObj{<a class="code hl_class" href="class_sudoku.html">Sudoku</a>(<span class="charliteral">&#39;e&#39;</span>)};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    QTimer *tmr;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">// FORM_H</span></div>
+<div class="ttc" id="aclass_form_html"><div class="ttname"><a href="class_form.html">Form</a></div><div class="ttdoc">class Form</div><div class="ttdef"><b>Definition</b> form.h:21</div></div>
+<div class="ttc" id="aclass_form_html_a010bd13cb63f8fe5f7763ec3a1a787a8"><div class="ttname"><a href="class_form.html#a010bd13cb63f8fe5f7763ec3a1a787a8">Form::PlayerStepInformationParser</a></div><div class="ttdeci">void PlayerStepInformationParser(std::string compileMessage)</div><div class="ttdef"><b>Definition</b> form.cpp:167</div></div>
+<div class="ttc" id="aclass_form_html_a09685f4aeafa180e190edabcd281951b"><div class="ttname"><a href="class_form.html#a09685f4aeafa180e190edabcd281951b">Form::lastSelectedCellColumn</a></div><div class="ttdeci">int lastSelectedCellColumn</div><div class="ttdoc">last selected cell column</div><div class="ttdef"><b>Definition</b> form.h:27</div></div>
+<div class="ttc" id="aclass_form_html_a1d44d573092ef7756d931fd91267abdb"><div class="ttname"><a href="class_form.html#a1d44d573092ef7756d931fd91267abdb">Form::lastSelectedCellRow</a></div><div class="ttdeci">int lastSelectedCellRow</div><div class="ttdoc">last selected cell row</div><div class="ttdef"><b>Definition</b> form.h:26</div></div>
+<div class="ttc" id="aclass_form_html_a231cb1aa274b9cf1b67ac49abca9dddb"><div class="ttname"><a href="class_form.html#a231cb1aa274b9cf1b67ac49abca9dddb">Form::TransformToTimeFormat</a></div><div class="ttdeci">std::string TransformToTimeFormat(int time)</div><div class="ttdef"><b>Definition</b> form.cpp:666</div></div>
+<div class="ttc" id="aclass_form_html_a2c3ceedef7fe03eb79ebbd5f0c6cad95"><div class="ttname"><a href="class_form.html#a2c3ceedef7fe03eb79ebbd5f0c6cad95">Form::FillSudokuTable</a></div><div class="ttdeci">void FillSudokuTable()</div><div class="ttdef"><b>Definition</b> form.cpp:144</div></div>
+<div class="ttc" id="aclass_form_html_a2cc05ee490f405b141657ad538b0a3a4"><div class="ttname"><a href="class_form.html#a2cc05ee490f405b141657ad538b0a3a4">Form::currentTimeSeconds</a></div><div class="ttdeci">int currentTimeSeconds</div><div class="ttdoc">current time in seconds for game</div><div class="ttdef"><b>Definition</b> form.h:28</div></div>
+<div class="ttc" id="aclass_form_html_a3b4aeaae4b2c95d303112432d9c78cd0"><div class="ttname"><a href="class_form.html#a3b4aeaae4b2c95d303112432d9c78cd0">Form::ChangeButtonsVisible</a></div><div class="ttdeci">void ChangeButtonsVisible(bool flag)</div><div class="ttdef"><b>Definition</b> form.cpp:55</div></div>
+<div class="ttc" id="aclass_form_html_a3dbc0d3b5c9d6474d5fd078d42fa71fc"><div class="ttname"><a href="class_form.html#a3dbc0d3b5c9d6474d5fd078d42fa71fc">Form::LoserGameWindow</a></div><div class="ttdeci">void LoserGameWindow()</div><div class="ttdef"><b>Definition</b> form.cpp:280</div></div>
+<div class="ttc" id="aclass_form_html_a645a7d454a5da44c5fcf2de2b3b9c89a"><div class="ttname"><a href="class_form.html#a645a7d454a5da44c5fcf2de2b3b9c89a">Form::CompileMessageToSudokuArray</a></div><div class="ttdeci">void CompileMessageToSudokuArray(std::string compileMessage)</div><div class="ttdef"><b>Definition</b> form.cpp:183</div></div>
+<div class="ttc" id="aclass_form_html_a6db2873a1777593a0883e066c9976486"><div class="ttname"><a href="class_form.html#a6db2873a1777593a0883e066c9976486">Form::StartGame</a></div><div class="ttdeci">void StartGame()</div><div class="ttdef"><b>Definition</b> form.cpp:341</div></div>
+<div class="ttc" id="aclass_form_html_a723c8f63c12659862c5df59b48a31488"><div class="ttname"><a href="class_form.html#a723c8f63c12659862c5df59b48a31488">Form::GetSudokuTable</a></div><div class="ttdeci">void GetSudokuTable()</div><div class="ttdef"><b>Definition</b> form.cpp:109</div></div>
+<div class="ttc" id="aclass_form_html_a7a2dc8f5edf71a36c0391efd87f272df"><div class="ttname"><a href="class_form.html#a7a2dc8f5edf71a36c0391efd87f272df">Form::secondClientIsConnect</a></div><div class="ttdeci">bool secondClientIsConnect</div><div class="ttdoc">connection status of second client</div><div class="ttdef"><b>Definition</b> form.h:30</div></div>
+<div class="ttc" id="aclass_form_html_a7d2729c79ee67a75e959620aa2c1e552"><div class="ttname"><a href="class_form.html#a7d2729c79ee67a75e959620aa2c1e552">Form::errorsCount</a></div><div class="ttdeci">int errorsCount</div><div class="ttdoc">current count of errors per game</div><div class="ttdef"><b>Definition</b> form.h:29</div></div>
+<div class="ttc" id="aclass_form_html_aa6111816e5287125820da9429e26c0fd"><div class="ttname"><a href="class_form.html#aa6111816e5287125820da9429e26c0fd">Form::WinnerGameWindow</a></div><div class="ttdeci">void WinnerGameWindow()</div><div class="ttdef"><b>Definition</b> form.cpp:230</div></div>
+<div class="ttc" id="aclass_form_html_ab3b3c5722cc154b013437a281faaaf7f"><div class="ttname"><a href="class_form.html#ab3b3c5722cc154b013437a281faaaf7f">Form::SetNumberToCell</a></div><div class="ttdeci">void SetNumberToCell(int row, int column, QString cellValue)</div><div class="ttdef"><b>Definition</b> form.cpp:74</div></div>
+<div class="ttc" id="aclass_form_html_ad56f457f69cd72d60855730544bbf8bb"><div class="ttname"><a href="class_form.html#ad56f457f69cd72d60855730544bbf8bb">Form::OpenGameMenu</a></div><div class="ttdeci">void OpenGameMenu()</div><div class="ttdef"><b>Definition</b> form.cpp:220</div></div>
+<div class="ttc" id="aclass_form_html_adc0ae67114cb7b4071b9f4c5a954e120"><div class="ttname"><a href="class_form.html#adc0ae67114cb7b4071b9f4c5a954e120">Form::ClientConnected</a></div><div class="ttdeci">void ClientConnected()</div><div class="ttdef"><b>Definition</b> form.cpp:324</div></div>
+<div class="ttc" id="aclass_form_html_af000df575d22c703b11776bb635010c9"><div class="ttname"><a href="class_form.html#af000df575d22c703b11776bb635010c9">Form::IncrementTime</a></div><div class="ttdeci">void IncrementTime()</div><div class="ttdef"><b>Definition</b> form.cpp:313</div></div>
+<div class="ttc" id="aclass_form_html_affe29cd38a39e8a78e312a5fb722801e"><div class="ttname"><a href="class_form.html#affe29cd38a39e8a78e312a5fb722801e">Form::UpdateTimer</a></div><div class="ttdeci">void UpdateTimer(int currentTimeSeconds)</div><div class="ttdef"><b>Definition</b> form.cpp:297</div></div>
+<div class="ttc" id="aclass_sudoku_html"><div class="ttname"><a href="class_sudoku.html">Sudoku</a></div><div class="ttdoc">class Sudoku</div><div class="ttdef"><b>Definition</b> sudoku.h:17</div></div>
+<div class="ttc" id="asudoku_8h_html"><div class="ttname"><a href="sudoku_8h.html">sudoku.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,32 @@
+\doxysection{Файл form/graphic/form.cpp}
+\hypertarget{form_8cpp}{}\label{form_8cpp}\index{form/graphic/form.cpp@{form/graphic/form.cpp}}
+{\ttfamily \#include "{}form.\+h"{}}\newline
+{\ttfamily \#include "{}ui\+\_\+form.\+h"{}}\newline
+{\ttfamily \#include "{}sudoku.\+h"{}}\newline
+{\ttfamily \#include "{}network.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$QTimer$>$}\newline
+{\ttfamily \#include $<$QDir$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$boost/thread.\+hpp$>$}\newline
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{form_8cpp_a7c4df3ec1d9942b783d92e94bfa64696}\label{form_8cpp_a7c4df3ec1d9942b783d92e94bfa64696} 
+\mbox{\hyperlink{class_server}{Server}} {\bfseries serv\+Obj} \{\mbox{\hyperlink{class_server}{Server}}()\}
+\item 
+\Hypertarget{form_8cpp_a9924fc7085a7703bf2df722d4a673d67}\label{form_8cpp_a9924fc7085a7703bf2df722d4a673d67} 
+\mbox{\hyperlink{class_client}{Client}} {\bfseries client\+Obj} \{\mbox{\hyperlink{class_client}{Client}}()\}
+\item 
+\Hypertarget{form_8cpp_a64a33c4b7c41f03d046dd1861639fd2c}\label{form_8cpp_a64a33c4b7c41f03d046dd1861639fd2c} 
+boost\+::thread\+\_\+group {\bfseries threads}
+\item 
+\Hypertarget{form_8cpp_abb36a12d18168fb5c674f9a6ab30fd1e}\label{form_8cpp_abb36a12d18168fb5c674f9a6ab30fd1e} 
+std\+::vector$<$ boost\+::thread \texorpdfstring{$\ast$}{*} $>$ {\bfseries threads\+\_\+array}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+The file with gui of sudoku game 

@@ -1,0 +1,43 @@
+\doxysection{Файл form/network/network.cpp}
+\hypertarget{network_8cpp}{}\label{network_8cpp}\index{form/network/network.cpp@{form/network/network.cpp}}
+{\ttfamily \#include "{}network.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/array.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/bind.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/thread.\+hpp$>$}\newline
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{network_8cpp_aef439aaec094584cb096cfc3e1c48a5e}{Up\+Server}} (std\+::vector$<$ boost\+::thread \texorpdfstring{$\ast$}{*} $>$ \&threads\+\_\+array, boost\+::thread\+\_\+group \&threads, \mbox{\hyperlink{class_server}{Server}} \texorpdfstring{$\ast$}{*}serv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{network_8cpp_a746643dfdbfb5d1ac1872e10b5c041c0}\label{network_8cpp_a746643dfdbfb5d1ac1872e10b5c041c0} 
+boost\+::recursive\+\_\+mutex {\bfseries cs}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+The file for making networking connection between two clients 
+
+\doxysubsection{Функции}
+\Hypertarget{network_8cpp_aef439aaec094584cb096cfc3e1c48a5e}\label{network_8cpp_aef439aaec094584cb096cfc3e1c48a5e} 
+\index{network.cpp@{network.cpp}!UpServer@{UpServer}}
+\index{UpServer@{UpServer}!network.cpp@{network.cpp}}
+\doxysubsubsection{\texorpdfstring{UpServer()}{UpServer()}}
+{\footnotesize\ttfamily void Up\+Server (\begin{DoxyParamCaption}\item[{std\+::vector$<$ boost\+::thread \texorpdfstring{$\ast$}{*} $>$ \&}]{threads\+\_\+array,  }\item[{boost\+::thread\+\_\+group \&}]{threads,  }\item[{\mbox{\hyperlink{class_server}{Server}} \texorpdfstring{$\ast$}{*}}]{serv }\end{DoxyParamCaption})}
+
+Create server threads
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em threads\+\_\+array} & threads array \\
+\hline
+\mbox{\texttt{ in}}  & {\em threads} & group of threads \\
+\hline
+\mbox{\texttt{ in}}  & {\em serv} & server object pointer \\
+\hline
+\end{DoxyParams}

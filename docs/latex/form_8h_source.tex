@@ -1,0 +1,90 @@
+\doxysection{form.\+h}
+\hypertarget{form_8h_source}{}\label{form_8h_source}\index{form/graphic/form.h@{form/graphic/form.h}}
+\mbox{\hyperlink{form_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ FORM\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ FORM\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}ui\_form.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sudoku_8h}{sudoku.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_form}{Form}};}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_form}{Form}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//QTableWidgetItem\ *\ lastSelectedCell;}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_form_a1d44d573092ef7756d931fd91267abdb}{lastSelectedCellRow}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_form_a09685f4aeafa180e190edabcd281951b}{lastSelectedCellColumn}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_form_a2cc05ee490f405b141657ad538b0a3a4}{currentTimeSeconds}}\{0\};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_form_a7d2729c79ee67a75e959620aa2c1e552}{errorsCount}}\{0\};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_form_a7a2dc8f5edf71a36c0391efd87f272df}{secondClientIsConnect}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_form}{Form}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_form}{\string~Form}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_a3b4aeaae4b2c95d303112432d9c78cd0}{ChangeButtonsVisible}}(\textcolor{keywordtype}{bool}\ flag);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_ab3b3c5722cc154b013437a281faaaf7f}{SetNumberToCell}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column,\ QString\ cellValue);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_a2c3ceedef7fe03eb79ebbd5f0c6cad95}{FillSudokuTable}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_a723c8f63c12659862c5df59b48a31488}{GetSudokuTable}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_affe29cd38a39e8a78e312a5fb722801e}{UpdateTimer}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_form_a2cc05ee490f405b141657ad538b0a3a4}{currentTimeSeconds}});}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_a6db2873a1777593a0883e066c9976486}{StartGame}}();}
+\DoxyCodeLine{00039\ \ \ \ \ std::string\ \mbox{\hyperlink{class_form_a231cb1aa274b9cf1b67ac49abca9dddb}{TransformToTimeFormat}}(\textcolor{keywordtype}{int}\ time);}
+\DoxyCodeLine{00040\ signals:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ SendMessageSignal(std::string\ messageNum);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ SudokuIsReadyToFill();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ GameEndWin();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ GameEndLose();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ CloseServer();}
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_ad56f457f69cd72d60855730544bbf8bb}{OpenGameMenu}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_a010bd13cb63f8fe5f7763ec3a1a787a8}{PlayerStepInformationParser}}(std::string\ compileMessage);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_a645a7d454a5da44c5fcf2de2b3b9c89a}{CompileMessageToSudokuArray}}(std::string\ compileMessage);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ CompileMessageToSolvedSudokuArray(std::string\ compileMessage);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_af000df575d22c703b11776bb635010c9}{IncrementTime}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_aa6111816e5287125820da9429e26c0fd}{WinnerGameWindow}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_adc0ae67114cb7b4071b9f4c5a954e120}{ClientConnected}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_form_a3dbc0d3b5c9d6474d5fd078d42fa71fc}{LoserGameWindow}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_createGameButton\_clicked();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button1\_clicked();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_sudokuTable\_cellPressed(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button2\_clicked();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button3\_clicked();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button4\_clicked();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button5\_clicked();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button6\_clicked();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button7\_clicked();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button8\_clicked();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button9\_clicked();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_joinGameButton\_clicked();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_backButton\_clicked();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_playGame\_clicked();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00086\ \ \ \ \ Ui::Form\ *ui;}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_sudoku}{Sudoku}}\ sudokuObj\{\mbox{\hyperlink{class_sudoku}{Sudoku}}(\textcolor{charliteral}{'e'})\};}
+\DoxyCodeLine{00088\ \ \ \ \ QTimer\ *tmr;}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FORM\_H}}
+
+\end{DoxyCode}

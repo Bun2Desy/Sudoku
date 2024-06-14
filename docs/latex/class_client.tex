@@ -1,0 +1,128 @@
+\doxysection{Класс Client}
+\hypertarget{class_client}{}\label{class_client}\index{Client@{Client}}
+
+
+class \doxylink{class_client}{Client}  
+
+
+
+
+{\ttfamily \#include $<$network.\+h$>$}
+
+Граф наследования\+:Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_client_a54d302e50a73a17af21997bdb0aae60f}{Transfer\+From\+GUITo\+Buffer}} (std\+::string message\+Num)
+\item 
+void \mbox{\hyperlink{class_client_abda8da2947bef69cbc432ec218fef6f8}{Server\+Is\+Closed}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_client_a22a6d01f8c6637be65eafba60d141c2f}\label{class_client_a22a6d01f8c6637be65eafba60d141c2f} 
+void {\bfseries Update\+Some\+Data} (std\+::string msg)
+\item 
+\Hypertarget{class_client_a41b5ea022a2c31b56345911b8f5aaec4}\label{class_client_a41b5ea022a2c31b56345911b8f5aaec4} 
+void {\bfseries Sudoku\+Table\+In\+Buffer} (std\+::string msg)
+\item 
+\Hypertarget{class_client_a80f2100040543d5cbbf43d53cf6c2d7d}\label{class_client_a80f2100040543d5cbbf43d53cf6c2d7d} 
+void {\bfseries Solved\+Sudoku\+Table\+In\+Buffer} (std\+::string msg)
+\item 
+\Hypertarget{class_client_a4e04171cf81324ab49659d9ca547ce88}\label{class_client_a4e04171cf81324ab49659d9ca547ce88} 
+void {\bfseries Get\+Timer\+Info} (int time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_client_a0046fd3f6d3fee2f4b07b506b7f35274}{Connect\+Client}} (std\+::vector$<$ boost\+::thread \texorpdfstring{$\ast$}{*} $>$ \&threads\+\_\+array, boost\+::thread\+\_\+group \&threads, std\+::string address)
+\item 
+void \mbox{\hyperlink{class_client_aae9c18331a0ea9a74030e28ef7aefab7}{Read\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_client_a6e169756db0bf15d4f4452663e0ab32d}{Send\+Message}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_client_ac298207e052f075df95e51f21af57527}\label{class_client_ac298207e052f075df95e51f21af57527} 
+boost\+::asio\+::io\+\_\+context {\bfseries io}
+\begin{DoxyCompactList}\small\item\em input-\/output context for client side \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a07c6089971dca6575c632eab823c73e3}\label{class_client_a07c6089971dca6575c632eab823c73e3} 
+tcp\+::socket {\bfseries socket}
+\begin{DoxyCompactList}\small\item\em client socket \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a05af8ddc65dbd0d465a3da497177bcdb}\label{class_client_a05af8ddc65dbd0d465a3da497177bcdb} 
+tcp\+::endpoint {\bfseries ep}
+\begin{DoxyCompactList}\small\item\em endpoint to connect client \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a0af2e5c314ff18dddb44ac8a2ae79927}\label{class_client_a0af2e5c314ff18dddb44ac8a2ae79927} 
+std\+::string {\bfseries msg\+\_\+ans} \{"{}"{}\}
+\begin{DoxyCompactList}\small\item\em string for write to buffer \end{DoxyCompactList}\item 
+\Hypertarget{class_client_ab8caf90bdd3af9c4af03defa020175f6}\label{class_client_ab8caf90bdd3af9c4af03defa020175f6} 
+bool {\bfseries game\+Is\+End} = false
+\begin{DoxyCompactList}\small\item\em game status \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+class \doxylink{class_client}{Client} 
+
+This class make client side relize 
+
+\doxysubsection{Методы}
+\Hypertarget{class_client_a0046fd3f6d3fee2f4b07b506b7f35274}\label{class_client_a0046fd3f6d3fee2f4b07b506b7f35274} 
+\index{Client@{Client}!ConnectClient@{ConnectClient}}
+\index{ConnectClient@{ConnectClient}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{ConnectClient()}{ConnectClient()}}
+{\footnotesize\ttfamily void Client\+::\+Connect\+Client (\begin{DoxyParamCaption}\item[{std\+::vector$<$ boost\+::thread \texorpdfstring{$\ast$}{*} $>$ \&}]{threads\+\_\+array,  }\item[{boost\+::thread\+\_\+group \&}]{threads,  }\item[{std\+::string}]{address = {\ttfamily "{}127.0.0.1"{}} }\end{DoxyParamCaption})}
+
+\doxylink{class_client}{Client} connection
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em threads\+\_\+array} & threads array \\
+\hline
+\mbox{\texttt{ in}}  & {\em threads} & group of threads \\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & ipv4 address for connect \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_client_aae9c18331a0ea9a74030e28ef7aefab7}\label{class_client_aae9c18331a0ea9a74030e28ef7aefab7} 
+\index{Client@{Client}!ReadMessage@{ReadMessage}}
+\index{ReadMessage@{ReadMessage}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{ReadMessage()}{ReadMessage()}}
+{\footnotesize\ttfamily void Client\+::\+Read\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read a message \Hypertarget{class_client_a6e169756db0bf15d4f4452663e0ab32d}\label{class_client_a6e169756db0bf15d4f4452663e0ab32d} 
+\index{Client@{Client}!SendMessage@{SendMessage}}
+\index{SendMessage@{SendMessage}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{SendMessage()}{SendMessage()}}
+{\footnotesize\ttfamily void Client\+::\+Send\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Send a message \Hypertarget{class_client_abda8da2947bef69cbc432ec218fef6f8}\label{class_client_abda8da2947bef69cbc432ec218fef6f8} 
+\index{Client@{Client}!ServerIsClosed@{ServerIsClosed}}
+\index{ServerIsClosed@{ServerIsClosed}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{ServerIsClosed}{ServerIsClosed}}
+{\footnotesize\ttfamily void Client\+::\+Server\+Is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Set state of connection to close \Hypertarget{class_client_a54d302e50a73a17af21997bdb0aae60f}\label{class_client_a54d302e50a73a17af21997bdb0aae60f} 
+\index{Client@{Client}!TransferFromGUIToBuffer@{TransferFromGUIToBuffer}}
+\index{TransferFromGUIToBuffer@{TransferFromGUIToBuffer}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{TransferFromGUIToBuffer}{TransferFromGUIToBuffer}}
+{\footnotesize\ttfamily void Client\+::\+Transfer\+From\+GUITo\+Buffer (\begin{DoxyParamCaption}\item[{std\+::string}]{message\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Load message to writing buffer
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em message\+Num} & message \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+form/network/\mbox{\hyperlink{network_8h}{network.\+h}}\item 
+form/network/\mbox{\hyperlink{network_8cpp}{network.\+cpp}}\end{DoxyCompactItemize}

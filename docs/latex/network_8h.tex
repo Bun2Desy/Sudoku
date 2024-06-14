@@ -1,0 +1,51 @@
+\doxysection{Файл form/network/network.h}
+\hypertarget{network_8h}{}\label{network_8h}\index{form/network/network.h@{form/network/network.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/array.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/bind.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/thread.\+hpp$>$}\newline
+{\ttfamily \#include $<$QObject$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_session}{Session}}
+\begin{DoxyCompactList}\small\item\em class \doxylink{class_session}{Session} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_server}{Server}}
+\begin{DoxyCompactList}\small\item\em class \doxylink{class_server}{Server} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_client}{Client}}
+\begin{DoxyCompactList}\small\item\em class \doxylink{class_client}{Client} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{network_8h_a51f568751781df83afcb420033425302}\label{network_8h_a51f568751781df83afcb420033425302} 
+typedef boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_session}{Session}} $>$ {\bfseries pointer}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{network_8h_aef439aaec094584cb096cfc3e1c48a5e}{Up\+Server}} (std\+::vector$<$ boost\+::thread \texorpdfstring{$\ast$}{*} $>$ \&threads\+\_\+array, boost\+::thread\+\_\+group \&threads, \mbox{\hyperlink{class_server}{Server}} \texorpdfstring{$\ast$}{*}serv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+The header file for making networking connection between two clients 
+
+\doxysubsection{Функции}
+\Hypertarget{network_8h_aef439aaec094584cb096cfc3e1c48a5e}\label{network_8h_aef439aaec094584cb096cfc3e1c48a5e} 
+\index{network.h@{network.h}!UpServer@{UpServer}}
+\index{UpServer@{UpServer}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{UpServer()}{UpServer()}}
+{\footnotesize\ttfamily void Up\+Server (\begin{DoxyParamCaption}\item[{std\+::vector$<$ boost\+::thread \texorpdfstring{$\ast$}{*} $>$ \&}]{threads\+\_\+array,  }\item[{boost\+::thread\+\_\+group \&}]{threads,  }\item[{\mbox{\hyperlink{class_server}{Server}} \texorpdfstring{$\ast$}{*}}]{serv }\end{DoxyParamCaption})}
+
+Create server threads
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em threads\+\_\+array} & threads array \\
+\hline
+\mbox{\texttt{ in}}  & {\em threads} & group of threads \\
+\hline
+\mbox{\texttt{ in}}  & {\em serv} & server object pointer \\
+\hline
+\end{DoxyParams}

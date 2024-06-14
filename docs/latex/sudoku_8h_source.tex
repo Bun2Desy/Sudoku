@@ -1,0 +1,36 @@
+\doxysection{sudoku.\+h}
+\hypertarget{sudoku_8h_source}{}\label{sudoku_8h_source}\index{form/sudoku/sudoku.h@{form/sudoku/sudoku.h}}
+\mbox{\hyperlink{sudoku_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ SUDOKU\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SUDOKU\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sudoku}{Sudoku}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}}\ =\ 9;}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<std::vector<int>>\ \mbox{\hyperlink{class_sudoku_a1c70aa5a8b75a6f3da125afa202a22a4}{field}}\{\ \mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}},\ std::vector<int>(\mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}},\ 0)\ \};}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<std::vector<int>>\ \mbox{\hyperlink{class_sudoku_a769b31642f8778a2a3a7b3b9eab52e84}{fieldwithgasps}}\{\ \mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}},\ std::vector<int>(\mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}},\ 0)\ \};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_sudoku_afa8017723b985e87157c4487cf8dcd17}{dif}}\ =\ \textcolor{charliteral}{'e'};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_sudoku_a59395d2a4b810c1c01dcd9b3cef402b1}{Sudoku}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_sudoku_a59395d2a4b810c1c01dcd9b3cef402b1}{Sudoku}}(\textcolor{keywordtype}{char}\ difficulty);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sudoku_ade324ddad0a92a52cb2de745e0c7ca98}{isCheckFillCell}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sudoku_a4319d455e2523ad91926fcb184909999}{CreateField}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sudoku_a3de510aaddb675dd53657345c798164f}{isCheckRow}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sudoku_a4870f902f8d5b05a22260d0844789b7f}{isCheckCol}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sudoku_a40ebf4c20c90f95c22bb7895b3f81df4}{isCheckSquare}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sudoku_a0d7511f6a7f32364f103fe7b976a5c1d}{CreateGasps}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sudoku_a447111465e2d000a1e87b792a55a86da}{Solver}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sudoku_a9d63d3e13e721524d545a4a2b89dc5b1}{UpdateSets}}(std::vector<std::vector<int>>\&,\ std::vector\ <\ std::vector\ <\ std::set<int>>>\&);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sudoku_ae8f10b37e5b403c6ce27d67f5e210e16}{isFindGasps}}(std::vector<std::vector<int>>\&);}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

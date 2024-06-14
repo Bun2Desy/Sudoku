@@ -1,0 +1,82 @@
+\doxysection{network.\+h}
+\hypertarget{network_8h_source}{}\label{network_8h_source}\index{form/network/network.h@{form/network/network.h}}
+\mbox{\hyperlink{network_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ NETWORK\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ NETWORK\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <boost/asio.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <boost/array.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <boost/bind.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <boost/thread.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }boost::asio;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }boost::asio::ip;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ bool\ gameIsEnd\ =\ false;}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//std::vector<boost::thread*>\ threads\_array;}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_session}{Session}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ tcp::socket\ \mbox{\hyperlink{class_session_a572f8c0fb26bad2b131e7b3e6774be33}{sock\_}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_session_a5157132359dce2d9698d6904c2473d48}{buff\_}}[1024];}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_session}{Session}}(io\_context*\ ioc)\ :\ \mbox{\hyperlink{class_session_a572f8c0fb26bad2b131e7b3e6774be33}{sock\_}}(*ioc)\{\}}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ boost::shared\_ptr<Session>\ pointer;}
+\DoxyCodeLine{00036\ \textcolor{comment}{//std::vector<pointer>\ sessions;}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_server}{Server}}\ :\ \textcolor{keyword}{public}\ QObject\{}
+\DoxyCodeLine{00043\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ boost::asio::io\_context*\ \mbox{\hyperlink{class_server_a64a030274984888961139e82a251d4ac}{io\_server}};}
+\DoxyCodeLine{00047\ \ \ \ \ tcp::endpoint\ \mbox{\hyperlink{class_server_a64ee402cbe8078cc2fb66adb03d58564}{localhost}}\{tcp::v4(),\ 8001\};}
+\DoxyCodeLine{00048\ \ \ \ \ tcp::acceptor\ \mbox{\hyperlink{class_server_a3f2410f352c9a08ae6676b7a5b718123}{acceptor}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_server_a68f5a8a61f060172ba5a60230fb8ff12}{playerMode}};}
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<pointer>\ \mbox{\hyperlink{class_server_aa71b9e0d39a5a7bd1914f4eaad7b2578}{sessions}};}
+\DoxyCodeLine{00051\ signals:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ SecondClientConnect();}
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_server}{Server}}()\ :\ \mbox{\hyperlink{class_server_a64a030274984888961139e82a251d4ac}{io\_server}}\{new\ boost::asio::io\_context()\},\ \mbox{\hyperlink{class_server_a3f2410f352c9a08ae6676b7a5b718123}{acceptor}}\{*\mbox{\hyperlink{class_server_a64a030274984888961139e82a251d4ac}{io\_server}},\ \mbox{\hyperlink{class_server_a64ee402cbe8078cc2fb66adb03d58564}{localhost}}\}\ \{\}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_server_ab9311c38d47b0b0531d95de8b4571003}{DoAccept}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_server_aea3b51ced10f04e169cc6bc02ae65ba0}{SimpleServer}}();}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client}{Client}}\ :\ \textcolor{keyword}{public}\ QObject\{}
+\DoxyCodeLine{00064\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ boost::asio::io\_context\ \mbox{\hyperlink{class_client_ac298207e052f075df95e51f21af57527}{io}};}
+\DoxyCodeLine{00068\ \ \ \ \ tcp::socket\ \mbox{\hyperlink{class_client_a07c6089971dca6575c632eab823c73e3}{socket}};}
+\DoxyCodeLine{00069\ \ \ \ \ tcp::endpoint\ \mbox{\hyperlink{class_client_a05af8ddc65dbd0d465a3da497177bcdb}{ep}};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//char\ msg\_char[1024];}}
+\DoxyCodeLine{00071\ \ \ \ \ std::string\ \mbox{\hyperlink{class_client_a0af2e5c314ff18dddb44ac8a2ae79927}{msg\_ans}}\{\textcolor{stringliteral}{"{}"{}}\};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_client_ab8caf90bdd3af9c4af03defa020175f6}{gameIsEnd}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//int\ bytes\{0\};}}
+\DoxyCodeLine{00074\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}()\ :\ \mbox{\hyperlink{class_client_a07c6089971dca6575c632eab823c73e3}{socket}}\{\mbox{\hyperlink{class_client_ac298207e052f075df95e51f21af57527}{io}}\}\ \{\}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a0046fd3f6d3fee2f4b07b506b7f35274}{ConnectClient}}(std::vector<boost::thread*>\&\ threads\_array,\ boost::thread\_group\&\ threads,\ std::string\ address);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_aae9c18331a0ea9a74030e28ef7aefab7}{ReadMessage}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a6e169756db0bf15d4f4452663e0ab32d}{SendMessage}}();}
+\DoxyCodeLine{00079\ signals:}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateSomeData(std::string\ msg);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ SudokuTableInBuffer(std::string\ msg);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ SolvedSudokuTableInBuffer(std::string\ msg);}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ GetTimerInfo(\textcolor{keywordtype}{int}\ time);}
+\DoxyCodeLine{00084\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a54d302e50a73a17af21997bdb0aae60f}{TransferFromGUIToBuffer}}(std::string\ messageNum);}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_abda8da2947bef69cbc432ec218fef6f8}{ServerIsClosed}}();}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{network_8h_aef439aaec094584cb096cfc3e1c48a5e}{UpServer}}(std::vector<boost::thread*>\&\ threads\_array,\ boost::thread\_group\&\ threads,\ \mbox{\hyperlink{class_server}{Server}}*\ serv);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NETWORK\_H}}
+\DoxyCodeLine{00092\ }
+
+\end{DoxyCode}

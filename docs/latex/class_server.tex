@@ -1,0 +1,74 @@
+\doxysection{Класс Server}
+\hypertarget{class_server}{}\label{class_server}\index{Server@{Server}}
+
+
+class \doxylink{class_server}{Server}  
+
+
+
+
+{\ttfamily \#include $<$network.\+h$>$}
+
+Граф наследования\+:Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_server}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_server_af68386649b81a3a01566c82746c9104a}\label{class_server_af68386649b81a3a01566c82746c9104a} 
+void {\bfseries Second\+Client\+Connect} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_server_ab9311c38d47b0b0531d95de8b4571003}{Do\+Accept}} ()
+\item 
+void \mbox{\hyperlink{class_server_aea3b51ced10f04e169cc6bc02ae65ba0}{Simple\+Server}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_server_a64a030274984888961139e82a251d4ac}\label{class_server_a64a030274984888961139e82a251d4ac} 
+boost\+::asio\+::io\+\_\+context \texorpdfstring{$\ast$}{*} {\bfseries io\+\_\+server}
+\begin{DoxyCompactList}\small\item\em input-\/output context pointer for server side \end{DoxyCompactList}\item 
+\Hypertarget{class_server_a64ee402cbe8078cc2fb66adb03d58564}\label{class_server_a64ee402cbe8078cc2fb66adb03d58564} 
+tcp\+::endpoint {\bfseries localhost} \{tcp\+::v4(), 8001\}
+\begin{DoxyCompactList}\small\item\em endpoint for server accept \end{DoxyCompactList}\item 
+\Hypertarget{class_server_a3f2410f352c9a08ae6676b7a5b718123}\label{class_server_a3f2410f352c9a08ae6676b7a5b718123} 
+tcp\+::acceptor {\bfseries acceptor}
+\begin{DoxyCompactList}\small\item\em object for accept connections \end{DoxyCompactList}\item 
+\Hypertarget{class_server_a68f5a8a61f060172ba5a60230fb8ff12}\label{class_server_a68f5a8a61f060172ba5a60230fb8ff12} 
+int {\bfseries player\+Mode}
+\begin{DoxyCompactList}\small\item\em single or multiplayer mode \end{DoxyCompactList}\item 
+\Hypertarget{class_server_aa71b9e0d39a5a7bd1914f4eaad7b2578}\label{class_server_aa71b9e0d39a5a7bd1914f4eaad7b2578} 
+std\+::vector$<$ pointer $>$ {\bfseries sessions}
+\begin{DoxyCompactList}\small\item\em vector of opened sessions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+class \doxylink{class_server}{Server} 
+
+This class make server side relize 
+
+\doxysubsection{Методы}
+\Hypertarget{class_server_ab9311c38d47b0b0531d95de8b4571003}\label{class_server_ab9311c38d47b0b0531d95de8b4571003} 
+\index{Server@{Server}!DoAccept@{DoAccept}}
+\index{DoAccept@{DoAccept}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{DoAccept()}{DoAccept()}}
+{\footnotesize\ttfamily void Server\+::\+Do\+Accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set server to state for accept clients \Hypertarget{class_server_aea3b51ced10f04e169cc6bc02ae65ba0}\label{class_server_aea3b51ced10f04e169cc6bc02ae65ba0} 
+\index{Server@{Server}!SimpleServer@{SimpleServer}}
+\index{SimpleServer@{SimpleServer}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{SimpleServer()}{SimpleServer()}}
+{\footnotesize\ttfamily void Server\+::\+Simple\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set server in state for read and write in buffer 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+form/network/\mbox{\hyperlink{network_8h}{network.\+h}}\item 
+form/network/\mbox{\hyperlink{network_8cpp}{network.\+cpp}}\end{DoxyCompactItemize}

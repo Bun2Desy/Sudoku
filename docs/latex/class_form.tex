@@ -1,0 +1,241 @@
+\doxysection{Класс Form}
+\hypertarget{class_form}{}\label{class_form}\index{Form@{Form}}
+
+
+class \doxylink{class_form}{Form}  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+Граф наследования\+:Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_form_ad56f457f69cd72d60855730544bbf8bb}{Open\+Game\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_form_a010bd13cb63f8fe5f7763ec3a1a787a8}{Player\+Step\+Information\+Parser}} (std\+::string compile\+Message)
+\item 
+void \mbox{\hyperlink{class_form_a645a7d454a5da44c5fcf2de2b3b9c89a}{Compile\+Message\+To\+Sudoku\+Array}} (std\+::string compile\+Message)
+\item 
+\Hypertarget{class_form_a4a001be52dc36da64a3a303dbe419315}\label{class_form_a4a001be52dc36da64a3a303dbe419315} 
+void {\bfseries Compile\+Message\+To\+Solved\+Sudoku\+Array} (std\+::string compile\+Message)
+\item 
+void \mbox{\hyperlink{class_form_af000df575d22c703b11776bb635010c9}{Increment\+Time}} ()
+\item 
+void \mbox{\hyperlink{class_form_aa6111816e5287125820da9429e26c0fd}{Winner\+Game\+Window}} ()
+\item 
+void \mbox{\hyperlink{class_form_adc0ae67114cb7b4071b9f4c5a954e120}{Client\+Connected}} ()
+\item 
+void \mbox{\hyperlink{class_form_a3dbc0d3b5c9d6474d5fd078d42fa71fc}{Loser\+Game\+Window}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_form_a3424ae9b6efaa6377567f83cc55dc4b5}\label{class_form_a3424ae9b6efaa6377567f83cc55dc4b5} 
+void {\bfseries Send\+Message\+Signal} (std\+::string message\+Num)
+\item 
+\Hypertarget{class_form_a7237ff3d3fa0fdbe6e4a33817eae953e}\label{class_form_a7237ff3d3fa0fdbe6e4a33817eae953e} 
+void {\bfseries Sudoku\+Is\+Ready\+To\+Fill} ()
+\item 
+\Hypertarget{class_form_a7bfc045abf6d8f3028a62cc127d65d95}\label{class_form_a7bfc045abf6d8f3028a62cc127d65d95} 
+void {\bfseries Game\+End\+Win} ()
+\item 
+\Hypertarget{class_form_a82f1c3d90fc0b0b208405b3b37afbadc}\label{class_form_a82f1c3d90fc0b0b208405b3b37afbadc} 
+void {\bfseries Game\+End\+Lose} ()
+\item 
+\Hypertarget{class_form_a5d16a10bd91ca23e4aafe869573eb987}\label{class_form_a5d16a10bd91ca23e4aafe869573eb987} 
+void {\bfseries Close\+Server} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_form_a23cb20192cdf7cf444d109b53e036ad0}{Form}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_form_a3b4aeaae4b2c95d303112432d9c78cd0}{Change\+Buttons\+Visible}} (bool flag)
+\item 
+void \mbox{\hyperlink{class_form_ab3b3c5722cc154b013437a281faaaf7f}{Set\+Number\+To\+Cell}} (int row, int column, QString cell\+Value)
+\item 
+void \mbox{\hyperlink{class_form_a2c3ceedef7fe03eb79ebbd5f0c6cad95}{Fill\+Sudoku\+Table}} ()
+\item 
+void \mbox{\hyperlink{class_form_a723c8f63c12659862c5df59b48a31488}{Get\+Sudoku\+Table}} ()
+\item 
+void \mbox{\hyperlink{class_form_affe29cd38a39e8a78e312a5fb722801e}{Update\+Timer}} (int \mbox{\hyperlink{class_form_a2cc05ee490f405b141657ad538b0a3a4}{current\+Time\+Seconds}})
+\item 
+void \mbox{\hyperlink{class_form_a6db2873a1777593a0883e066c9976486}{Start\+Game}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_form_a231cb1aa274b9cf1b67ac49abca9dddb}{Transform\+To\+Time\+Format}} (int time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_form_a1d44d573092ef7756d931fd91267abdb}\label{class_form_a1d44d573092ef7756d931fd91267abdb} 
+int {\bfseries last\+Selected\+Cell\+Row}
+\begin{DoxyCompactList}\small\item\em last selected cell row \end{DoxyCompactList}\item 
+\Hypertarget{class_form_a09685f4aeafa180e190edabcd281951b}\label{class_form_a09685f4aeafa180e190edabcd281951b} 
+int {\bfseries last\+Selected\+Cell\+Column}
+\begin{DoxyCompactList}\small\item\em last selected cell column \end{DoxyCompactList}\item 
+\Hypertarget{class_form_a2cc05ee490f405b141657ad538b0a3a4}\label{class_form_a2cc05ee490f405b141657ad538b0a3a4} 
+int {\bfseries current\+Time\+Seconds} \{0\}
+\begin{DoxyCompactList}\small\item\em current time in seconds for game \end{DoxyCompactList}\item 
+\Hypertarget{class_form_a7d2729c79ee67a75e959620aa2c1e552}\label{class_form_a7d2729c79ee67a75e959620aa2c1e552} 
+int {\bfseries errors\+Count} \{0\}
+\begin{DoxyCompactList}\small\item\em current count of errors per game \end{DoxyCompactList}\item 
+\Hypertarget{class_form_a7a2dc8f5edf71a36c0391efd87f272df}\label{class_form_a7a2dc8f5edf71a36c0391efd87f272df} 
+bool {\bfseries second\+Client\+Is\+Connect} = false
+\begin{DoxyCompactList}\small\item\em connection status of second client \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+class \doxylink{class_form}{Form} 
+
+This class needed to create graphical interface of game 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_form_a23cb20192cdf7cf444d109b53e036ad0}\label{class_form_a23cb20192cdf7cf444d109b53e036ad0} 
+\index{Form@{Form}!Form@{Form}}
+\index{Form@{Form}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{Form()}{Form()}}
+{\footnotesize\ttfamily Form\+::\+Form (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for new form object 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em parent} & reference on gui window \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_form_a3b4aeaae4b2c95d303112432d9c78cd0}\label{class_form_a3b4aeaae4b2c95d303112432d9c78cd0} 
+\index{Form@{Form}!ChangeButtonsVisible@{ChangeButtonsVisible}}
+\index{ChangeButtonsVisible@{ChangeButtonsVisible}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{ChangeButtonsVisible()}{ChangeButtonsVisible()}}
+{\footnotesize\ttfamily void Form\+::\+Change\+Buttons\+Visible (\begin{DoxyParamCaption}\item[{bool}]{flag }\end{DoxyParamCaption})}
+
+Set state of game buttons 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em flag} & show or hide buttons state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_form_adc0ae67114cb7b4071b9f4c5a954e120}\label{class_form_adc0ae67114cb7b4071b9f4c5a954e120} 
+\index{Form@{Form}!ClientConnected@{ClientConnected}}
+\index{ClientConnected@{ClientConnected}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{ClientConnected}{ClientConnected}}
+{\footnotesize\ttfamily void Form\+::\+Client\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Set state of second client connect on true \Hypertarget{class_form_a645a7d454a5da44c5fcf2de2b3b9c89a}\label{class_form_a645a7d454a5da44c5fcf2de2b3b9c89a} 
+\index{Form@{Form}!CompileMessageToSudokuArray@{CompileMessageToSudokuArray}}
+\index{CompileMessageToSudokuArray@{CompileMessageToSudokuArray}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{CompileMessageToSudokuArray}{CompileMessageToSudokuArray}}
+{\footnotesize\ttfamily void Form\+::\+Compile\+Message\+To\+Sudoku\+Array (\begin{DoxyParamCaption}\item[{std\+::string}]{compile\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Compile message from buffer for filling sudoku game field 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em compile\+Message} & information of sudoku table from buffer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_form_a2c3ceedef7fe03eb79ebbd5f0c6cad95}\label{class_form_a2c3ceedef7fe03eb79ebbd5f0c6cad95} 
+\index{Form@{Form}!FillSudokuTable@{FillSudokuTable}}
+\index{FillSudokuTable@{FillSudokuTable}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{FillSudokuTable()}{FillSudokuTable()}}
+{\footnotesize\ttfamily void Form\+::\+Fill\+Sudoku\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fill sudoku game field \Hypertarget{class_form_a723c8f63c12659862c5df59b48a31488}\label{class_form_a723c8f63c12659862c5df59b48a31488} 
+\index{Form@{Form}!GetSudokuTable@{GetSudokuTable}}
+\index{GetSudokuTable@{GetSudokuTable}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{GetSudokuTable()}{GetSudokuTable()}}
+{\footnotesize\ttfamily void Form\+::\+Get\+Sudoku\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get string information of all cells of sudoku table \Hypertarget{class_form_af000df575d22c703b11776bb635010c9}\label{class_form_af000df575d22c703b11776bb635010c9} 
+\index{Form@{Form}!IncrementTime@{IncrementTime}}
+\index{IncrementTime@{IncrementTime}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{IncrementTime}{IncrementTime}}
+{\footnotesize\ttfamily void Form\+::\+Increment\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Increment second \Hypertarget{class_form_a3dbc0d3b5c9d6474d5fd078d42fa71fc}\label{class_form_a3dbc0d3b5c9d6474d5fd078d42fa71fc} 
+\index{Form@{Form}!LoserGameWindow@{LoserGameWindow}}
+\index{LoserGameWindow@{LoserGameWindow}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{LoserGameWindow}{LoserGameWindow}}
+{\footnotesize\ttfamily void Form\+::\+Loser\+Game\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Open a lose window \Hypertarget{class_form_ad56f457f69cd72d60855730544bbf8bb}\label{class_form_ad56f457f69cd72d60855730544bbf8bb} 
+\index{Form@{Form}!OpenGameMenu@{OpenGameMenu}}
+\index{OpenGameMenu@{OpenGameMenu}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{OpenGameMenu}{OpenGameMenu}}
+{\footnotesize\ttfamily void Form\+::\+Open\+Game\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Open a game window \Hypertarget{class_form_a010bd13cb63f8fe5f7763ec3a1a787a8}\label{class_form_a010bd13cb63f8fe5f7763ec3a1a787a8} 
+\index{Form@{Form}!PlayerStepInformationParser@{PlayerStepInformationParser}}
+\index{PlayerStepInformationParser@{PlayerStepInformationParser}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{PlayerStepInformationParser}{PlayerStepInformationParser}}
+{\footnotesize\ttfamily void Form\+::\+Player\+Step\+Information\+Parser (\begin{DoxyParamCaption}\item[{std\+::string}]{compile\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Parse information of cell 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em compile\+Message} & information of cell from buffer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_form_ab3b3c5722cc154b013437a281faaaf7f}\label{class_form_ab3b3c5722cc154b013437a281faaaf7f} 
+\index{Form@{Form}!SetNumberToCell@{SetNumberToCell}}
+\index{SetNumberToCell@{SetNumberToCell}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{SetNumberToCell()}{SetNumberToCell()}}
+{\footnotesize\ttfamily void Form\+::\+Set\+Number\+To\+Cell (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{QString}]{cell\+Value }\end{DoxyParamCaption})}
+
+Set number to cell 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em row} & row of cell \\
+\hline
+\mbox{\texttt{ in}}  & {\em column} & column of cell \\
+\hline
+\mbox{\texttt{ in}}  & {\em cell\+Value} & value of cell \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_form_a6db2873a1777593a0883e066c9976486}\label{class_form_a6db2873a1777593a0883e066c9976486} 
+\index{Form@{Form}!StartGame@{StartGame}}
+\index{StartGame@{StartGame}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{StartGame()}{StartGame()}}
+{\footnotesize\ttfamily void Form\+::\+Start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create multiplayer game \Hypertarget{class_form_a231cb1aa274b9cf1b67ac49abca9dddb}\label{class_form_a231cb1aa274b9cf1b67ac49abca9dddb} 
+\index{Form@{Form}!TransformToTimeFormat@{TransformToTimeFormat}}
+\index{TransformToTimeFormat@{TransformToTimeFormat}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{TransformToTimeFormat()}{TransformToTimeFormat()}}
+{\footnotesize\ttfamily std\+::string Form\+::\+Transform\+To\+Time\+Format (\begin{DoxyParamCaption}\item[{int}]{time }\end{DoxyParamCaption})}
+
+Transform seconds int format to minutes and seconds format 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em time} & time in seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+time format in minutes and seconds 
+\end{DoxyReturn}
+\Hypertarget{class_form_affe29cd38a39e8a78e312a5fb722801e}\label{class_form_affe29cd38a39e8a78e312a5fb722801e} 
+\index{Form@{Form}!UpdateTimer@{UpdateTimer}}
+\index{UpdateTimer@{UpdateTimer}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{UpdateTimer()}{UpdateTimer()}}
+{\footnotesize\ttfamily void Form\+::\+Update\+Timer (\begin{DoxyParamCaption}\item[{int}]{current\+Time\+Seconds }\end{DoxyParamCaption})}
+
+Update timer on game window 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em current\+Time\+Seconds} & The current time in seconds \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_form_aa6111816e5287125820da9429e26c0fd}\label{class_form_aa6111816e5287125820da9429e26c0fd} 
+\index{Form@{Form}!WinnerGameWindow@{WinnerGameWindow}}
+\index{WinnerGameWindow@{WinnerGameWindow}!Form@{Form}}
+\doxysubsubsection{\texorpdfstring{WinnerGameWindow}{WinnerGameWindow}}
+{\footnotesize\ttfamily void Form\+::\+Winner\+Game\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Open a winner window 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+form/graphic/\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+form/graphic/\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

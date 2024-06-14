@@ -1,0 +1,192 @@
+\doxysection{Класс Sudoku}
+\hypertarget{class_sudoku}{}\label{class_sudoku}\index{Sudoku@{Sudoku}}
+
+
+class \doxylink{class_sudoku}{Sudoku}  
+
+
+
+
+{\ttfamily \#include $<$sudoku.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sudoku_a59395d2a4b810c1c01dcd9b3cef402b1}\label{class_sudoku_a59395d2a4b810c1c01dcd9b3cef402b1} 
+{\bfseries Sudoku} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sudoku_a6f8c0097e6fc1aff88827be5943860b1}{Sudoku}} (char difficulty)
+\item 
+bool \mbox{\hyperlink{class_sudoku_ade324ddad0a92a52cb2de745e0c7ca98}{is\+Check\+Fill\+Cell}} (int, int)
+\item 
+void \mbox{\hyperlink{class_sudoku_a4319d455e2523ad91926fcb184909999}{Create\+Field}} ()
+\item 
+bool \mbox{\hyperlink{class_sudoku_a3de510aaddb675dd53657345c798164f}{is\+Check\+Row}} (int, int)
+\item 
+bool \mbox{\hyperlink{class_sudoku_a4870f902f8d5b05a22260d0844789b7f}{is\+Check\+Col}} (int, int)
+\item 
+bool \mbox{\hyperlink{class_sudoku_a40ebf4c20c90f95c22bb7895b3f81df4}{is\+Check\+Square}} (int, int)
+\item 
+void \mbox{\hyperlink{class_sudoku_a0d7511f6a7f32364f103fe7b976a5c1d}{Create\+Gasps}} ()
+\item 
+bool \mbox{\hyperlink{class_sudoku_a447111465e2d000a1e87b792a55a86da}{Solver}} ()
+\item 
+void \mbox{\hyperlink{class_sudoku_a9d63d3e13e721524d545a4a2b89dc5b1}{Update\+Sets}} (std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&, std\+::vector$<$ std\+::vector$<$ std\+::set$<$ int $>$ $>$ $>$ \&)
+\item 
+bool \mbox{\hyperlink{class_sudoku_ae8f10b37e5b403c6ce27d67f5e210e16}{is\+Find\+Gasps}} (std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}\label{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62} 
+const size\+\_\+t {\bfseries SIZE} = 9
+\begin{DoxyCompactList}\small\item\em constant field size \end{DoxyCompactList}\item 
+\Hypertarget{class_sudoku_a1c70aa5a8b75a6f3da125afa202a22a4}\label{class_sudoku_a1c70aa5a8b75a6f3da125afa202a22a4} 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ {\bfseries field} \{ \mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}}, std\+::vector$<$int$>$(\mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}}, 0) \}
+\begin{DoxyCompactList}\small\item\em solved field \end{DoxyCompactList}\item 
+\Hypertarget{class_sudoku_a769b31642f8778a2a3a7b3b9eab52e84}\label{class_sudoku_a769b31642f8778a2a3a7b3b9eab52e84} 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ {\bfseries fieldwithgasps} \{ \mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}}, std\+::vector$<$int$>$(\mbox{\hyperlink{class_sudoku_ab12ff49f9f30d9ac160a40f5bf818c62}{SIZE}}, 0) \}
+\begin{DoxyCompactList}\small\item\em field with gasps \end{DoxyCompactList}\item 
+\Hypertarget{class_sudoku_afa8017723b985e87157c4487cf8dcd17}\label{class_sudoku_afa8017723b985e87157c4487cf8dcd17} 
+char {\bfseries dif} = \textquotesingle{}e\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em level of difficulty \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+class \doxylink{class_sudoku}{Sudoku} 
+
+This class is aimed at creating \doxylink{class_sudoku}{Sudoku} fields with different levels of difficulty with a unique solution 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_sudoku_a6f8c0097e6fc1aff88827be5943860b1}\label{class_sudoku_a6f8c0097e6fc1aff88827be5943860b1} 
+\index{Sudoku@{Sudoku}!Sudoku@{Sudoku}}
+\index{Sudoku@{Sudoku}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{Sudoku()}{Sudoku()}}
+{\footnotesize\ttfamily Sudoku\+::\+Sudoku (\begin{DoxyParamCaption}\item[{char}]{difficulty }\end{DoxyParamCaption})}
+
+Constructor for new object 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em difficulty} & level of difficulty \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_sudoku_a4319d455e2523ad91926fcb184909999}\label{class_sudoku_a4319d455e2523ad91926fcb184909999} 
+\index{Sudoku@{Sudoku}!CreateField@{CreateField}}
+\index{CreateField@{CreateField}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{CreateField()}{CreateField()}}
+{\footnotesize\ttfamily void Sudoku\+::\+Create\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The main function to create field \Hypertarget{class_sudoku_a0d7511f6a7f32364f103fe7b976a5c1d}\label{class_sudoku_a0d7511f6a7f32364f103fe7b976a5c1d} 
+\index{Sudoku@{Sudoku}!CreateGasps@{CreateGasps}}
+\index{CreateGasps@{CreateGasps}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{CreateGasps()}{CreateGasps()}}
+{\footnotesize\ttfamily void Sudoku\+::\+Create\+Gasps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The function to create field with gasps \Hypertarget{class_sudoku_a4870f902f8d5b05a22260d0844789b7f}\label{class_sudoku_a4870f902f8d5b05a22260d0844789b7f} 
+\index{Sudoku@{Sudoku}!isCheckCol@{isCheckCol}}
+\index{isCheckCol@{isCheckCol}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{isCheckCol()}{isCheckCol()}}
+{\footnotesize\ttfamily bool Sudoku\+::is\+Check\+Col (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Сompares the values of the current cell and cells in the same column before it 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em x} & row number \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & column number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if no matches or false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_sudoku_ade324ddad0a92a52cb2de745e0c7ca98}\label{class_sudoku_ade324ddad0a92a52cb2de745e0c7ca98} 
+\index{Sudoku@{Sudoku}!isCheckFillCell@{isCheckFillCell}}
+\index{isCheckFillCell@{isCheckFillCell}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{isCheckFillCell()}{isCheckFillCell()}}
+{\footnotesize\ttfamily bool Sudoku\+::is\+Check\+Fill\+Cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+A simplified version of checking the correctness of the inserted number in cell 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em x} & row number \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & column number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if number is correct or false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_sudoku_a3de510aaddb675dd53657345c798164f}\label{class_sudoku_a3de510aaddb675dd53657345c798164f} 
+\index{Sudoku@{Sudoku}!isCheckRow@{isCheckRow}}
+\index{isCheckRow@{isCheckRow}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{isCheckRow()}{isCheckRow()}}
+{\footnotesize\ttfamily bool Sudoku\+::is\+Check\+Row (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Сompares the values of the current cell and cells in the same row before it 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em x} & row number \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & column number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if no matches or false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_sudoku_a40ebf4c20c90f95c22bb7895b3f81df4}\label{class_sudoku_a40ebf4c20c90f95c22bb7895b3f81df4} 
+\index{Sudoku@{Sudoku}!isCheckSquare@{isCheckSquare}}
+\index{isCheckSquare@{isCheckSquare}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{isCheckSquare()}{isCheckSquare()}}
+{\footnotesize\ttfamily bool Sudoku\+::is\+Check\+Square (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Сompares the values of the current cell and cells in the same square before it 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em x} & row number \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & column number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if no matches or false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_sudoku_ae8f10b37e5b403c6ce27d67f5e210e16}\label{class_sudoku_ae8f10b37e5b403c6ce27d67f5e210e16} 
+\index{Sudoku@{Sudoku}!isFindGasps@{isFindGasps}}
+\index{isFindGasps@{isFindGasps}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{isFindGasps()}{isFindGasps()}}
+{\footnotesize\ttfamily bool Sudoku\+::is\+Find\+Gasps (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&}]{solvefield }\end{DoxyParamCaption})}
+
+Search for cells with zero value 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em solvefield} & field that is used to check solutions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if the number of non-\/zero values is not zero or false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_sudoku_a447111465e2d000a1e87b792a55a86da}\label{class_sudoku_a447111465e2d000a1e87b792a55a86da} 
+\index{Sudoku@{Sudoku}!Solver@{Solver}}
+\index{Solver@{Solver}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{Solver()}{Solver()}}
+{\footnotesize\ttfamily bool Sudoku\+::\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check fields for unique solutions \begin{DoxyReturn}{Возвращает}
+true if the field have unique solution or false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_sudoku_a9d63d3e13e721524d545a4a2b89dc5b1}\label{class_sudoku_a9d63d3e13e721524d545a4a2b89dc5b1} 
+\index{Sudoku@{Sudoku}!UpdateSets@{UpdateSets}}
+\index{UpdateSets@{UpdateSets}!Sudoku@{Sudoku}}
+\doxysubsubsection{\texorpdfstring{UpdateSets()}{UpdateSets()}}
+{\footnotesize\ttfamily void Sudoku\+::\+Update\+Sets (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&}]{solvefield,  }\item[{std\+::vector$<$ std\+::vector$<$ std\+::set$<$ int $>$ $>$ $>$ \&}]{zones }\end{DoxyParamCaption})}
+
+Updates possible values for each cell 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em solvefield} & field that is used to check solutions \\
+\hline
+\mbox{\texttt{ in}}  & {\em zones} & data of possible values for each cell \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+form/sudoku/\mbox{\hyperlink{sudoku_8h}{sudoku.\+h}}\item 
+form/sudoku/\mbox{\hyperlink{sudoku_8cpp}{sudoku.\+cpp}}\end{DoxyCompactItemize}
