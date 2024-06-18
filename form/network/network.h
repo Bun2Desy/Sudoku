@@ -81,6 +81,7 @@ signals:
     void SudokuTableInBuffer(std::string msg);
     void SolvedSudokuTableInBuffer(std::string msg);
     void GetTimerInfo(int time);
+    void ErrorMessage();
 public slots:
     void TransferFromGUIToBuffer(std::string messageNum);
     void ServerIsClosed();

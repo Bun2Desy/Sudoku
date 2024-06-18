@@ -49,9 +49,12 @@ void Client::ReadMessage()
         if(num[0] == 't'){
             if(num.length() > 5){
                 num = num.substr(num.find(".") + 1);
-                emit SudokuTableInBuffer(num);
+                if(num.find(".") > 500 || std::count(num.begin(), num.end(), '.') > 1)
+                    emit ErrorMessage();
+                else
+                    emit SudokuTableInBuffer(num);
             } else{
-                num = num.substr(1);
+                num = num.substr(1, num.length() - 1);
                 emit GetTimerInfo(std::stoi(num));
             }
         } else if(num.length() == 3){
@@ -59,8 +62,11 @@ void Client::ReadMessage()
         } else if(num[0] == 'e'){
             gameIsEnd = true;
             break;
-        } else{
+        } else if(num.find(".") < 500 && std::count(num.begin(), num.end(), '.') == 1){
             emit SudokuTableInBuffer(num);
+        }
+        else{
+            emit ErrorMessage();
         }
     }
     //std::cout << "Thread 2 finish" << std::endl;
